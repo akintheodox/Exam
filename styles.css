@@ -187,6 +187,15 @@ body {
     display: flex;
     flex-direction: column;
   }
+  .hero-content h1 {
+    font-size: 1.4rem;
+    word-break: break-word;
+    line-height: 1.2;
+  }
+  .hero-content p {
+    font-size: 0.95rem;
+    word-break: break-word;
+  }
   .stats {
     justify-content: center;
     gap: 20px;
