@@ -1,0 +1,147 @@
+body {
+  background: #0a0c1b;
+  margin: 0;
+  font-family: 'Inter', Arial, sans-serif;
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-container {
+  display: flex;
+  background: #1b1938;
+  border-radius: 16px;
+  overflow: hidden;
+  max-width: 900px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+}
+
+.hero-content {
+  flex: 1;
+  padding: 48px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero-content h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin: 0 0 20px 0;
+  line-height: 1.2;
+}
+
+.highlight {
+  color: #aa5cdb;
+}
+
+.hero-content p {
+  color: #b7b7c9;
+  font-size: 1rem;
+  margin-bottom: 40px;
+  line-height: 1.5;
+}
+
+.stats {
+  display: flex;
+  gap: 40px;
+}
+
+.stats div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.stat-number {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.stat-label {
+  font-size: 0.8rem;
+  color: #b7b7c9;
+  letter-spacing: 1px;
+  margin-top: 4px;
+}
+
+.hero-image {
+  position: relative;
+  flex: 1;
+  min-width: 320px;
+  min-height: 320px;
+  display: flex;
+  align-items: stretch;
+  justify-content: stretch;
+}
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.image-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(170, 92, 219, 0.5);
+  mix-blend-mode: multiply;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.hero-image img {
+  position: relative;
+  z-index: 0;
+}
+
+/* Responsive */
+@media (max-width: 800px) {
+  .hero-container {
+    flex-direction: column;
+    max-width: 100vw;
+    width: 100%;
+    align-items: stretch;
+  }
+  .hero-image {
+    order: 0;
+    width: 100%;
+    min-width: 0 !important;
+    min-height: 0 !important;
+    height: auto;
+    border-radius: 16px 16px 0 0;
+    overflow: hidden;
+    flex: none !important;
+    display: block;
+  }
+  .hero-image img {
+    width: 100%;
+    height: auto;
+    min-height: 180px;
+    max-height: 260px;
+    object-fit: cover;
+    display: block;
+  }
+  .hero-content {
+    order: 1;
+    width: 100%;
+    min-width: 0 !important;
+    padding: 32px 20px 0 20px;
+    align-items: center;
+    text-align: center;
+    flex: none !important;
+    display: flex;
+    flex-direction: column;
+  }
+  .stats {
+    justify-content: center;
+    gap: 32px;
+  }
+  .stats div {
+    align-items: center;
+  }
+} 
